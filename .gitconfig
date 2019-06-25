@@ -1,0 +1,15 @@
+[user]
+	name = dora
+	email = m5i2n2o@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch

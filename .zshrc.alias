@@ -1,0 +1,14 @@
+alias git-branch-cleanup="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d % && git remote prune origin"
+alias aandg='rtmpdump -r rtmp://fms-base1.mitene.ad.jp/agqr/aandg22 --live | mplayer -'
+
+# up command
+function up () {
+    if [ $# -eq 0 ] ; then
+        cd ..
+    else
+        for ((i=0; i < $1; i++))
+        do
+            cd ..
+        done
+    fi
+}
