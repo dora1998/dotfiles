@@ -9,3 +9,5 @@ do
   fi
 done
 
+# Homebrew restore
+brew bundle install --file=.brewfile
