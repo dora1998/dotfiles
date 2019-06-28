@@ -11,3 +11,12 @@ done
 
 # Homebrew restore
 brew bundle install --file=.brewfile
+
+# VSCode User Settings
+ln -s $HOME/dotfiles/vscode/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# VSCode Extentions
+cat ./vscode/extensions.txt | while read line
+do
+  code --install-extension $line
+done

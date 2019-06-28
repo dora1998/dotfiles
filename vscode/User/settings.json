@@ -1,0 +1,96 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "ptex2pdf",
+      "tools": ["ptex2pdf"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "ptex2pdf",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-v",
+        "%DIR%:/workdir",
+        "paperist/alpine-texlive-ja",
+        "ptex2pdf",
+        "-l",
+        "-ot",
+        "-kanji=utf8 -synctex=1",
+        "%DOCFILE%.tex"
+      ]
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "docker run -it -v $PWD:/workdir texlive-19hoscom dvipdfmx",
+      "args": ["%DOCFILE%.dvi"]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "workbench.colorTheme": "Monokai",
+  "editor.renderControlCharacters": true,
+  "vetur.format.defaultFormatter.css": "none",
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.less": "none",
+  "vetur.format.defaultFormatter.postcss": "none",
+  "vetur.format.defaultFormatter.scss": "none",
+  "eslint.autoFixOnSave": true,
+  "eslint.nodePath": "/Users/mtakeuchi/.nodebrew/current/bin/eslint",
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "autoFix": true,
+      "language": "vue"
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.disableLanguages": [],
+  "prettier.stylelintIntegration": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "window.zoomLevel": 0,
+  "latex-workshop.docker.enabled": true,
+  "latex-workshop.docker.image.latex": "paperist/alpine-texlive-ja",
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "editor.formatOnSave": true,
+  "liveshare.featureSet": "insiders",
+  "julia.enableTelemetry": true,
+  "emmet.triggerExpansionOnTab": true,
+  "go.useLanguageServer": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "stylelint.autoFix": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true
+}
