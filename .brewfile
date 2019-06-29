@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "rcmdnk/file"
 cask "adoptopenjdk8"
 brew "ansible"
 brew "bat"
@@ -28,6 +29,7 @@ brew "imagemagick"
 brew "ios-deploy"
 brew "libmemcached"
 brew "llvm"
+brew "mas"
 brew "mono", link: false
 brew "mplayer"
 brew "mysql@5.7"
@@ -43,4 +45,27 @@ brew "zlib", link: true
 brew "zsh"
 brew "zsh-completions"
 brew "heroku/brew/heroku"
+brew "rcmdnk/file/brew-file"
+cask "android-file-transfer"
+cask "coteditor"
+cask "docker"
+cask "firefox"
+cask "gimp"
+cask "gitkraken"
 cask "julia"
+cask "skype"
+cask "spotify"
+cask "visual-studio-code"
+cask "vlc"
+mas "BetterSnapTool", id: 417375580
+mas "GeoGebra 5", id: 845142834
+mas "iHex", id: 909566003
+mas "iMage Tools", id: 493949693
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Mathpix Snipping Tool", id: 1349670778
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PicGIF Lite", id: 844918735
+mas "Slack", id: 803453959
+mas "Xcode", id: 497799835
