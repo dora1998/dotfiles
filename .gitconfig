@@ -1,6 +1,6 @@
 [user]
 	name = dora
-	email = m5i2n2o@gmail.com
+	email = 31735614+dora1998@users.noreply.github.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
