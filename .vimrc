@@ -1,3 +1,34 @@
+" Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'https://github.com/twitvim/twitvim.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" 隠しファイルを表示する
+let NERDTreeShowHidden = 1
+" デフォルトでツリーを表示させる
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" twitvim
+let twitvim_enable_python = 1
+let twitvim_browser_cmd = 'open' " for Mac
+"let twitvim_browser_cmd = 'C:¥Program Files¥Your_Browser_Path' " for Windows
+let twitvim_force_ssl = 1
+let twitvim_count = 40
+
+" Ctrl+B: Open NERDTree
+nnoremap <silent><C-b> :NERDTreeToggle<CR>
+
 " ファイルを上書きする前にバックアップを作ることを無効化
 set nowritebackup
 " ファイルを上書きする前にバックアップを作ることを無効化
