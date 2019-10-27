@@ -2,7 +2,9 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "ptex2pdf",
-      "tools": ["ptex2pdf"]
+      "tools": [
+        "ptex2pdf"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -14,7 +16,7 @@
         "--rm",
         "-v",
         "%DIR%:/workdir",
-        "paperist/alpine-texlive-ja",
+        "johejo/debian-latex-jp",
         "ptex2pdf",
         "-l",
         "-ot",
@@ -25,7 +27,9 @@
     {
       "name": "dvipdfmx",
       "command": "docker run -it -v $PWD:/workdir texlive-19hoscom dvipdfmx",
-      "args": ["%DOCFILE%.dvi"]
+      "args": [
+        "%DOCFILE%.dvi"
+      ]
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
@@ -93,5 +97,19 @@
   },
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "ruby.format": "rubocop",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "reek": true,
+    "rubocop": true,
+    "ruby": true, //Runs ruby -wc
+    "fasterer": true,
+    "debride": true,
+    "ruby-lint": true
+  },
+  "ruby.rubocop.useBundler": true,
+  "editor.tabSize": 2,
 }
