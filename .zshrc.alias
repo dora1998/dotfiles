@@ -1,6 +1,9 @@
 alias git-branch-cleanup="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d % && git remote prune origin"
 alias aandg='rtmpdump -r rtmp://fms-base1.mitene.ad.jp/agqr/aandg22 --live | mplayer -'
 
+alias repos='ghq list -p | peco'
+alias cdg='cd $(repos)'
+
 # up command
 function up () {
     if [ $# -eq 0 ] ; then

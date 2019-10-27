@@ -42,16 +42,13 @@ prompt pure
 #export GO111MODULE=on
 eval "$(goenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc'; fi
-
+# rbenv
+eval "$(rbenv init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
 # bat theme
-export BAT_THEME="GitHub"
+export BAT_THEME="OneHalfDark"
 
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
@@ -59,3 +56,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc'; fi
