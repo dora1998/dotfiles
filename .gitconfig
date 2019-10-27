@@ -10,6 +10,10 @@
 	helper = osxkeychain
 [core]
 	editor = vim
+	autocrlf = input
 [alias]
 	co = checkout
 	br = branch
+
+[ghq]
+  root = ~/Projects
