@@ -65,10 +65,8 @@
       "autoFix": true
     }
   ],
-  "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.disableLanguages": [],
-  "prettier.stylelintIntegration": true,
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
   "window.zoomLevel": 0,
@@ -85,18 +83,8 @@
   "julia.enableTelemetry": true,
   "emmet.triggerExpansionOnTab": true,
   "go.useLanguageServer": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "stylelint.autoFix": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
   "python.jediEnabled": false,
   "ruby.format": "rubocop",
   "ruby.codeCompletion": "rcodetools",
@@ -112,4 +100,5 @@
   },
   "ruby.rubocop.useBundler": true,
   "editor.tabSize": 2,
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
 }
