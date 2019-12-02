@@ -1,0 +1,18 @@
+name: install
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches:
+      - master
+
+jobs:
+  ubuntu:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install required packages
+        run: ./brew_install.sh
+      - name: Install dotfiles
+        run: setup.sh
