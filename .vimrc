@@ -79,3 +79,23 @@ set clipboard=unnamed,autoselect
 " シンタックスハイライト
 syntax on
 
+"**********
+" キーバインド
+"**********
+" 行頭へ移動
+cnoremap <C-a> <Home>
+inoremap <C-a> <Home>
+" 行末へ移動
+cnoremap <C-e> <End>
+inoremap <C-e> <End>
+" 単語移動
+" Exコマンドを実装する関数を定義
+function! ExecExCommand(cmd)
+  silent exec a:cmd
+  return ''
+endfunction
+" 補完せず補完ウィンドウを閉じてから移動
+inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
+inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
+" マウスを使う
+set mouse=a
