@@ -2,9 +2,7 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "ptex2pdf",
-      "tools": [
-        "ptex2pdf"
-      ]
+      "tools": ["ptex2pdf"]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -27,13 +25,11 @@
     {
       "name": "dvipdfmx",
       "command": "docker run -it -v $PWD:/workdir texlive-19hoscom dvipdfmx",
-      "args": [
-        "%DOCFILE%.dvi"
-      ]
+      "args": ["%DOCFILE%.dvi"]
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Night Owl Light",
   "editor.renderControlCharacters": true,
   "vetur.format.defaultFormatter.css": "none",
   "vetur.format.defaultFormatter.html": "none",
@@ -41,43 +37,25 @@
   "vetur.format.defaultFormatter.less": "none",
   "vetur.format.defaultFormatter.postcss": "none",
   "vetur.format.defaultFormatter.scss": "none",
-  "eslint.autoFixOnSave": true,
   "eslint.nodePath": "/Users/mtakeuchi/.nodebrew/current/bin/eslint",
   "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "autoFix": true,
-      "language": "vue"
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "typescript",
+    "typescriptreact"
   ],
   "prettier.singleQuote": true,
   "prettier.disableLanguages": [],
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "latex-workshop.docker.enabled": true,
   "latex-workshop.docker.image.latex": "paperist/alpine-texlive-ja",
   "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true
-  },
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.formatOnSave": true,
   "liveshare.featureSet": "insiders",
   "julia.enableTelemetry": true,
@@ -101,4 +79,6 @@
   "ruby.rubocop.useBundler": true,
   "editor.tabSize": 2,
   "python.dataScience.sendSelectionToInteractiveWindow": true,
+"workbench.iconTheme": "material-icon-theme",
+"python.languageServer": "Microsoft"
 }
