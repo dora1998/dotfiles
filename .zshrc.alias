@@ -1,8 +1,12 @@
 alias git-branch-cleanup="git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d % && git remote prune origin"
-alias aandg='rtmpdump -r rtmp://fms-base1.mitene.ad.jp/agqr/aandg22 --live | mplayer -'
+# alias aandg='rtmpdump -r rtmp://fms-base1.mitene.ad.jp/agqr/aandg22 --live | mplayer -'
+alias aandg='rtmpdump -r rtmp://fms-base1.mitene.ad.jp/agqr/aandg333 --live | mplayer -'
 
 alias repos='ghq list -p | peco'
 alias cdg='cd $(repos)'
+
+alias mdtopdf='docker run -it --rm -v "`pwd`":/workdir plass/mdtopdf mdtopdf'
+alias w-mdtopdf='docker run -it --rm -v "`pwd`":/workdir plass/mdtopdf w-mdtopdf'
 
 # up command
 function up () {

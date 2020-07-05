@@ -1,5 +1,6 @@
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=($HOME/.zsh/completion $fpath)
+fpath+=~/.zfunc
 source $HOME/.bash_profile
 
 source $HOME/.zshrc.path
@@ -67,3 +68,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # thefuck
 eval $(thefuck --alias)
+
+# zaw
+source /Users/mtakeuchi/Projects/github.com/zsh-users/zaw/zaw.zsh
+bindkey '^R' zaw-history
+bindkey '^g' zaw-git-recent-branches
