@@ -40,11 +40,6 @@ setopt list_packed
 autoload -U promptinit; promptinit
 prompt pure
 
-#export GO111MODULE=on
-eval "$(goenv init -)"
-
-# rbenv
-eval "$(rbenv init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -63,8 +58,6 @@ if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # thefuck
 eval $(thefuck --alias)
