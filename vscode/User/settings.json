@@ -49,7 +49,7 @@
   "prettier.disableLanguages": [],
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "latex-workshop.docker.enabled": true,
   "latex-workshop.docker.image.latex": "paperist/alpine-texlive-ja",
   "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
