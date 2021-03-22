@@ -6,6 +6,11 @@ cd $SCRIPT_DIR
 
 source src/bootstrap.sh
 
+prompt '🔧 Link dotfiles?'
+if [[ $? -eq 0 ]]; then
+  source src/install/link.sh
+fi
+
 prompt '🍺 Install Homebrew?'
 if [[ $? -eq 0 ]]; then
   source src/install/brew.sh
