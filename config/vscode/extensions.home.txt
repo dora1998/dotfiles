@@ -1,4 +1,5 @@
 Arjun.swagger-viewer
+bradlc.vscode-tailwindcss
 bungcip.better-toml
 CoenraadS.bracket-pair-colorizer
 CoenraadS.bracket-pair-colorizer-2
@@ -18,6 +19,7 @@ jpoissonnier.vscode-styled-components
 julialang.language-julia
 leafvmaple.octave
 lextudio.restructuredtext
+matklad.rust-analyzer
 mechatroner.rainbow-csv
 mikestead.dotenv
 misogi.ruby-rubocop
@@ -25,6 +27,8 @@ ms-azuretools.vscode-docker
 MS-CEINTL.vscode-language-pack-ja
 ms-dotnettools.csharp
 ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
 ms-vscode-remote.remote-containers
 ms-vscode.cpptools
 ms-vscode.vscode-typescript-tslint-plugin
@@ -37,12 +41,12 @@ rebornix.ruby
 redhat.vscode-yaml
 ricard.postcss
 robinbentley.sass-indented
-runem.lit-plugin
 sdras.night-owl
 sporto.rails-go-to-spec
 stuartzhang.stylelint-stzhang
 stylelint.vscode-stylelint
 tianjiaohuang.octave-debug
 toasty-technologies.octave
+toba.vsfire
 tomoki1207.pdf
 wingrunr21.vscode-ruby

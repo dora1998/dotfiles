@@ -36,6 +36,9 @@ setopt list_packed
 # setopt correct
 # SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
 
+# historyに重複を記録しない
+setopt hist_ignore_dups
+
 # https://github.com/sindresorhus/pure
 autoload -U promptinit; promptinit
 prompt pure
@@ -66,3 +69,5 @@ eval $(thefuck --alias)
 source /Users/mtakeuchi/Projects/github.com/zsh-users/zaw/zaw.zsh
 bindkey '^R' zaw-history
 bindkey '^g' zaw-git-recent-branches
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

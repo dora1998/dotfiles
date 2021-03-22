@@ -29,7 +29,7 @@
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
-  "workbench.colorTheme": "Night Owl Light",
+  "workbench.colorTheme": "Quiet Light",
   "editor.renderControlCharacters": true,
   "vetur.format.defaultFormatter.css": "none",
   "vetur.format.defaultFormatter.html": "none",
@@ -45,25 +45,21 @@
     "typescript",
     "typescriptreact"
   ],
-  "prettier.singleQuote": true,
-  "prettier.disableLanguages": [],
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "window.zoomLevel": 0,
-  "latex-workshop.docker.enabled": true,
-  "latex-workshop.docker.image.latex": "paperist/alpine-texlive-ja",
   "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "liveshare.featureSet": "insiders",
   "julia.enableTelemetry": true,
   "emmet.triggerExpansionOnTab": true,
   "go.useLanguageServer": true,
-  "stylelint.autoFix": true,
   "python.linting.pylintEnabled": false,
-  "python.jediEnabled": false,
   "ruby.format": "rubocop",
   "ruby.codeCompletion": "rcodetools",
   "ruby.intellisense": "rubyLocate",
@@ -77,8 +73,27 @@
     "ruby-lint": true
   },
   "ruby.rubocop.useBundler": true,
-  "editor.tabSize": 2,
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
-"workbench.iconTheme": "material-icon-theme",
-"python.languageServer": "Microsoft"
+"editor.tabSize": 2,
+  "workbench.iconTheme": "material-icon-theme",
+  "python.languageServer": "Pylance",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+},
+"jupyter.sendSelectionToInteractiveWindow": true,
+"jupyter.alwaysTrustNotebooks": true,
+"editor.fontSize": 14,
+"workbench.editorAssociations": [
+  {
+    "viewType": "jupyter.notebook.ipynb",
+    "filenamePattern": "*.ipynb"
+  }
+]
 }
