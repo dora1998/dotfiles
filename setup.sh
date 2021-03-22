@@ -1,22 +1,24 @@
 #!/bin/bash
 
-DOT_FILES=( .bash_profile .zshrc .zshrc.path .zshrc.alias .gitconfig .vimrc )
+# 相対パスを使うためにcd
+SCRIPT_DIR=`dirname $0`
+cd $SCRIPT_DIR
 
-for file in ${DOT_FILES[@]}
-do
-  if [[ ! -e $HOME/$file ]]; then
-    ln -s $HOME/dotfiles/$file $HOME/$file
-  fi
-done
+source src/bootstrap.sh
+
+prompt '🍺 Install Homebrew?'
+if [[ $? -eq 0 ]]; then
+  source src/install/brew.sh
+fi
 
 # Homebrew restore
-brew bundle install --file=.brewfile
-
-# VSCode User Settings
-ln -s $HOME/dotfiles/vscode/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
+prompt '📦 Restore Homebrew packages?'
+if [[ $? -eq 0 ]]; then
+  source src/install/brew_packages.sh $1
+fi
 
 # VSCode Extentions
-cat ./vscode/extensions.txt | while read line
-do
-  code --install-extension $line
-done
+prompt '✍️  Install VSCode Extensions?'
+if [[ $? -eq 0 ]]; then
+  source src/install/vscode.sh
+fi
