@@ -6,8 +6,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[credential]
-	helper = osxkeychain
 [core]
 	editor = vim
 	autocrlf = input
@@ -21,3 +19,6 @@
   root = ~/Projects
 [pull]
 	ff = only
+
+[include]
+	path = ~/.gitconfig.macos
