@@ -1,7 +1,6 @@
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=($HOME/.zsh/completion $fpath)
 fpath+=~/.zfunc
-source $HOME/.bash_profile
 
 source $HOME/.zshrc.path
 source $HOME/.zshrc.alias
