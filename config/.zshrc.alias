@@ -7,7 +7,9 @@ alias cdg='cd $(repos)'
 
 alias mdtopdf='docker run -it --rm -v "`pwd`":/workdir plass/mdtopdf mdtopdf'
 alias w-mdtopdf='docker run -it --rm -v "`pwd`":/workdir plass/mdtopdf w-mdtopdf'
-alias dtts='CLIENT_ID=794957345943453706 TOKEN=Nzk0OTU3MzQ1OTQzNDUzNzA2.X_CXuA.xPqXTxknubSH3ZYViC_kbbqcumU discord-tts'
+
+alias arm="exec arch -arch arm64e /bin/zsh --login"
+alias x64="exec arch -arch x86_64 /bin/zsh --login"
 
 # up command
 function up () {
@@ -35,3 +37,28 @@ function rgaf() {
 	xdg-open "$file"
 }
 
+# Ctrl-^ で cd ..
+# https://github.com/arael/configs/blob/57650c837500ad916f7f7f18903070db354ec58b/zsh/zshrc.prezto#L140
+function cdup() {
+  echo
+  cd ..
+  prompt_${prompt_theme}_precmd
+  zle reset-prompt
+  return 0
+}
+zle -N cdup
+bindkey '^\^' cdup
+
+#
+# Previews files in Quick Look.
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/osx/functions/ql
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+function ql {
+	if (( $# > 0 )); then
+  	qlmanage -p "$@" &> /dev/null
+	fi
+}
