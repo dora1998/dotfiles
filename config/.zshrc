@@ -33,16 +33,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完リストの表示間隔を狭くする
 setopt list_packed
 
-# コマンドの打ち間違いを指摘してくれる
-# setopt correct
-# SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
-
 # historyに重複を記録しない
 setopt hist_ignore_dups
-
-# https://github.com/sindresorhus/pure
-autoload -U promptinit; promptinit
-prompt pure
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -71,4 +63,7 @@ source /Users/mtakeuchi/Projects/github.com/zsh-users/zaw/zaw.zsh
 bindkey '^R' zaw-history
 bindkey '^g' zaw-git-recent-branches
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# prezto
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
