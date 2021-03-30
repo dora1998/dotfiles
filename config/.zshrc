@@ -63,7 +63,11 @@ source /Users/mtakeuchi/Projects/github.com/zsh-users/zaw/zaw.zsh
 bindkey '^R' zaw-history
 bindkey '^g' zaw-git-recent-branches
 
+# z
+. $HOME/Projects/github.com/rupa/z/z.sh
+
 # prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
