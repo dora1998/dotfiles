@@ -73,7 +73,7 @@
     "ruby-lint": true
   },
   "ruby.rubocop.useBundler": true,
-"editor.tabSize": 2,
+  "editor.tabSize": 2,
   "workbench.iconTheme": "material-icon-theme",
   "python.languageServer": "Pylance",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -86,14 +86,32 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
-},
-"jupyter.sendSelectionToInteractiveWindow": true,
-"jupyter.alwaysTrustNotebooks": true,
-"editor.fontSize": 14,
-"workbench.editorAssociations": [
-  {
-    "viewType": "jupyter.notebook.ipynb",
-    "filenamePattern": "*.ipynb"
-  }
-]
+  },
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "jupyter.alwaysTrustNotebooks": true,
+  "editor.fontSize": 14,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.sideBar.location": "right",
+  "editor.accessibilitySupport": "off",
+  "redhat.telemetry.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "rust-client.engine": "rust-analyzer",
+  "rust.all_features": true,
+  "[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "julia.symbolCacheDownload": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterTypes.enabled": true
 }

@@ -6,3 +6,10 @@ elif [[ $ARCH == x86_64 ]]; then
 fi
 
 eval "$(anyenv init -)"
+
+
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+
