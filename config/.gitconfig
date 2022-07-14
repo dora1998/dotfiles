@@ -14,11 +14,20 @@
 	br = branch
   sw = switch
   rs = restore
+  cf = commit --fixup
+  rb = rebase -i --autosquash
+  wip = !"git commit -m \"wip: $(date +'%F %T')\""
+  amend = commit --amend --no-edit
+  cb = !"f() { git switch --no-track -c $1 origin/main; }; f"
+  main = checkout origin/main
+[pull]
+	ff = only
+[branch]
+	autoSetupMerge = simple
 
 [ghq]
   root = ~/Projects
-[pull]
-	ff = only
 
 [include]
-	path = ~/.gitconfig.macos
+	path = ~/.gitconfig.local
+

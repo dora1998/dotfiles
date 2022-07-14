@@ -50,16 +50,16 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # export PIPENV_VENV_IN_PROJECT=true
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Projects/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mtakeuchi/Projects/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Projects/google-cloud-sdk/completion.zsh.inc'; fi
 
 # thefuck
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
 # zaw
-source /Users/mtakeuchi/Projects/github.com/zsh-users/zaw/zaw.zsh
+source $HOME/Projects/github.com/zsh-users/zaw/zaw.zsh
 bindkey '^R' zaw-history
 bindkey '^g' zaw-git-recent-branches
 
