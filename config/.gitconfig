@@ -16,6 +16,8 @@
   rs = restore
   cf = commit --fixup
   rb = rebase -i --autosquash
+  rc = rebase --continue
+  st = status
   wip = !"git commit -m \"wip: $(date +'%F %T')\""
   amend = commit --amend --no-edit
   cb = !"f() { git switch --no-track -c $1 origin/main; }; f"
@@ -30,4 +32,3 @@
 
 [include]
 	path = ~/.gitconfig.local
-

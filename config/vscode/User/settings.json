@@ -1,35 +1,5 @@
 {
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "ptex2pdf",
-      "tools": ["ptex2pdf"]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "ptex2pdf",
-      "command": "docker",
-      "args": [
-        "run",
-        "--rm",
-        "-v",
-        "%DIR%:/workdir",
-        "johejo/debian-latex-jp",
-        "ptex2pdf",
-        "-l",
-        "-ot",
-        "-kanji=utf8 -synctex=1",
-        "%DOCFILE%.tex"
-      ]
-    },
-    {
-      "name": "dvipdfmx",
-      "command": "docker run -it -v $PWD:/workdir texlive-19hoscom dvipdfmx",
-      "args": ["%DOCFILE%.dvi"]
-    }
-  ],
-  "latex-workshop.view.pdf.viewer": "tab",
-  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "Night Owl",
   "editor.renderControlCharacters": true,
   "vetur.format.defaultFormatter.css": "none",
   "vetur.format.defaultFormatter.html": "none",
@@ -56,7 +26,6 @@
     "source.fixAll.eslint": true
   },
   "liveshare.featureSet": "insiders",
-  "julia.enableTelemetry": true,
   "emmet.triggerExpansionOnTab": true,
   "go.useLanguageServer": true,
   "python.linting.pylintEnabled": false,
@@ -87,31 +56,18 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "jupyter.sendSelectionToInteractiveWindow": true,
-  "jupyter.alwaysTrustNotebooks": true,
   "editor.fontSize": 14,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "workbench.sideBar.location": "right",
-  "editor.accessibilitySupport": "off",
-  "redhat.telemetry.enabled": true,
   "editor.bracketPairColorization.enabled": true,
-  "rust-client.engine": "rust-analyzer",
-  "rust.all_features": true,
-  "[latex]": {
-    "editor.formatOnPaste": false,
-    "editor.suggestSelection": "recentlyUsedByPrefix"
-  },
-  "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer"
-  },
-  "terminal.integrated.commandsToSkipShell": [
-    "language-julia.interrupt"
-  ],
-  "julia.symbolCacheDownload": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.parameterNames.enabled": "literals",
-  "typescript.inlayHints.parameterTypes.enabled": true
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.startupEditor": "none",
+  "git.branchProtection": ["main", "master"],
+  "editor.accessibilitySupport": "off",
+  "redhat.telemetry.enabled": true
 }

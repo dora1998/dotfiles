@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'https://github.com/twitvim/twitvim.git'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
