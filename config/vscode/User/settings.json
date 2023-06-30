@@ -68,6 +68,11 @@
   },
   "workbench.startupEditor": "none",
   "git.branchProtection": ["main", "master"],
+  "redhat.telemetry.enabled": true,
+  "git.confirmSync": false,
+  "prettier.enableDebugLogs": true,
+  "githubPullRequests.pullBranch": "never",
+  "editor.fontFamily": "JetBrains Mono, monospace",
   "editor.accessibilitySupport": "off",
-  "redhat.telemetry.enabled": true
+  "terminal.integrated.fontSize": 14
 }

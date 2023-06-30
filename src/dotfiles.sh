@@ -9,4 +9,5 @@ DOT_FILES=(
   .gitconfig.local
   .gitconfig.macos
   .vimrc
+  .asdfrc
 )

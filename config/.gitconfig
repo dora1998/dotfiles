@@ -24,8 +24,12 @@
   main = checkout origin/main
 [pull]
 	ff = only
+[push]
+  autoSetupRemote = true
 [branch]
 	autoSetupMerge = simple
+[http]
+  postBuffer = 104857600
 
 [ghq]
   root = ~/Projects
