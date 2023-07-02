@@ -36,3 +36,6 @@
 
 [include]
 	path = ~/.gitconfig.local
+[http]
+	# https://stackoverflow.com/questions/15843937/git-push-hangs-after-total-line
+	postBuffer = 157286400

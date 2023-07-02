@@ -9,3 +9,6 @@ fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.post.zsh"
+
+# Added by OrbStack: command-line tools and integration
+[[ -f "$HOME/.orbstack/shell/init.zsh" ]] && source $HOME/.orbstack/shell/init.zsh 2>/dev/null || :
