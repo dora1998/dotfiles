@@ -11,6 +11,9 @@ alias w-mdtopdf='docker run -it --rm -v "`pwd`":/workdir plass/mdtopdf w-mdtopdf
 alias arm="exec arch -arch arm64e /bin/zsh --login"
 alias x64="exec arch -arch x86_64 /bin/zsh --login"
 
+alias sed="gsed"
+alias awk="gawk"
+
 # up command
 function up () {
     if [ $# -eq 0 ] ; then

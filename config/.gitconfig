@@ -9,6 +9,7 @@
 [core]
 	editor = vim
 	autocrlf = input
+	ignorecase = false
 [alias]
 	co = checkout
 	br = branch
@@ -22,20 +23,25 @@
   amend = commit --amend --no-edit
   cb = !"f() { git switch --no-track -c $1 origin/main; }; f"
   main = checkout origin/main
+  c = commit
+  ca = commit --amend --no-edit
+	cf = commit --fixup
+  rb = rebase -i --autosquash
+	pushf = push --force-with-lease
+	pullf = !"git fetch && git reset --hard origin/$(git branch --show-current)"
 [pull]
 	ff = only
 [push]
   autoSetupRemote = true
 [branch]
 	autoSetupMerge = simple
-[http]
-  postBuffer = 104857600
-
 [ghq]
   root = ~/Projects
-
-[include]
-	path = ~/.gitconfig.local
 [http]
 	# https://stackoverflow.com/questions/15843937/git-push-hangs-after-total-line
 	postBuffer = 157286400
+[init]
+	defaultBranch = main
+
+[include]
+	path = ~/.gitconfig.local

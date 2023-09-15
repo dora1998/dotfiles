@@ -5,4 +5,3 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Projects/google-cloud-sdk/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-

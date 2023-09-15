@@ -20,18 +20,18 @@ compinit -u
 # 補完候補に色つける
 autoload -U colors
 colors
-zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ":completion:*" list-colors "${LS_COLORS}"
  
 # 単語の入力途中でもTab補完を有効化
 setopt complete_in_word
 
-zstyle ':completion:*' menu select
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
-zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
+zstyle ":completion:*" menu select
+zstyle ":completion:*:cd:*" ignore-parents parent pwd
+zstyle ":completion:*:descriptions" format "%BCompleting%b %U%d%u"
 # キャッシュの利用による補完の高速化
-zstyle ':completion::complete:*' use-cache true
+zstyle ":completion::complete:*" use-cache true
 # 大文字、小文字を区別せず補完する
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Z}"
 # 補完リストの表示間隔を狭くする
 setopt list_packed
 
@@ -67,9 +67,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
@@ -77,6 +74,7 @@ echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
