@@ -73,7 +73,7 @@
   "terminal.integrated.fontSize": 14,
   "svelte.enable-ts-plugin": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "typescript.tsserver.maxTsServerMemory": 4096,
+  "typescript.tsserver.maxTsServerMemory": 8192,
   "vetur.format.defaultFormatter.scss": "none",
   "editor.fontLigatures": true,
   "stylelint.validate": ["css", "postcss", "typescript", "typescriptreact"],
