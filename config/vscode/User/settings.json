@@ -23,7 +23,6 @@
   ],
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "editor.formatOnSave": true,
@@ -32,6 +31,8 @@
     "source.fixAll.eslint": true
   },
   "liveshare.featureSet": "insiders",
+  "emmet.triggerExpansionOnTab": true,
+  "go.useLanguageServer": true,
   "python.linting.pylintEnabled": false,
   "ruby.format": "rubocop",
   "ruby.codeCompletion": "rcodetools",

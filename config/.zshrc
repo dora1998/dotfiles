@@ -62,6 +62,9 @@ bindkey '^g' zaw-git-recent-branches
 # z
 . $HOME/Projects/github.com/rupa/z/z.sh
 
+# ni
+source $HOME/dotfiles/src/ni.zsh
+
 # prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
