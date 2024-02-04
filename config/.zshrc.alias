@@ -79,3 +79,9 @@ gcx() {
   fi
 }
 
+function mob_win {
+  yabai -m window --grid 1:3:0:0:2:1 --space 1 --focus
+
+  win=$(yabai -m query --windows | jq '.[] | select(.title | test("ハドルミーティング")) | .id')
+  yabai -m window $win --grid 1:3:2:0:1:1 --space 1
+}
