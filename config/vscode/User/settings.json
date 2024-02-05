@@ -8,7 +8,7 @@
   "vetur.format.defaultFormatter.less": "none",
   "editor.bracketPairColorization.enabled": true,
   "emmet.triggerExpansionOnTab": true,
-  "jestrunner.jestCommand": "yarn run test:unit",
+  "jestrunner.jestCommand": "pnpm run test:unit",
   "vetur.format.defaultFormatter.postcss": "none",
   "go.useLanguageServer": true,
   "editor.fontSize": 14,
@@ -27,26 +27,10 @@
   "git.enableSmartCommit": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true,
-    "source.fixAll.eslint": true
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
-  "liveshare.featureSet": "insiders",
-  "emmet.triggerExpansionOnTab": true,
-  "go.useLanguageServer": true,
   "python.linting.pylintEnabled": false,
-  "ruby.format": "rubocop",
-  "ruby.codeCompletion": "rcodetools",
-  "ruby.intellisense": "rubyLocate",
-  "ruby.useLanguageServer": true,
-  "ruby.lint": {
-    "reek": true,
-    "rubocop": true,
-    "ruby": true, //Runs ruby -wc
-    "fasterer": true,
-    "debride": true,
-    "ruby-lint": true
-  },
-  "ruby.rubocop.useBundler": true,
   "editor.tabSize": 2,
   "workbench.iconTheme": "material-icon-theme",
   "python.languageServer": "Pylance",
@@ -54,7 +38,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "workbench.sideBar.location": "right",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
