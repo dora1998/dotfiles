@@ -10,5 +10,8 @@ fi
 # Added by OrbStack: command-line tools and integration
 [[ -f "$HOME/.orbstack/shell/init.zsh" ]] && source $HOME/.orbstack/shell/init.zsh 2>/dev/null || :
 
+# mise
+eval "$(mise activate zsh --shims)"
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zprofile.post.zsh"

@@ -70,8 +70,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# asdf
-if [[ -f "$(brew --prefix asdf)/libexec/asdf.sh" ]]; then . "$(brew --prefix asdf)/libexec/asdf.sh"; fi
+# mise 
+eval "$(mise activate zsh)"
 
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"

@@ -79,6 +79,10 @@ gcx() {
   fi
 }
 
+function cdgw() {
+  cd $(gh glance dir $1)
+}
+
 function mob_win {
   yabai -m window --grid 1:3:0:0:2:1 --space 1 --focus
 
@@ -94,7 +98,7 @@ fmt="\
 %(if:equals=$user_name)%(authorname)%(then)%(color:default)%(else)%(color:brightred)%(end)%(refname:short)|\
 %(committerdate:relative)|\
 %(subject)"
-function select-git-branch-friendly() {
+function gitbi() {
   selected_branch=$(
     git branch --sort=-committerdate --format=$fmt --color=always \
     | column -ts'|' \
@@ -105,6 +109,6 @@ function select-git-branch-friendly() {
   CURSOR=$#LBUFFER+$#selected_branch
   zle redisplay
 }
-zle -N select-git-branch-friendly
-bindkey '^b' select-git-branch-friendly
+zle -N gitbi
+bindkey '^b' gitbi
 
