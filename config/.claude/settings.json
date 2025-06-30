@@ -2,10 +2,22 @@
   "permissions": {
     "allow": [
       "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
       "Bash(go test:*)",
+      "Bash(go list:*)",
+      "Bash(go build:*)",
+      "Bash(go mod tidy)",
       "Bash(git status:*)",
       "Bash(git show:*)",
-      "Bash(grep:*)"
+      "Bash(gh pr list:*)",
+      "Bash(gh pr create --draft:*)",
+      "Bash(osascript:*)",
+      "WebFetch(domain:pkg.go.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:opentelemetry.io)"
     ],
     "deny": []
   }

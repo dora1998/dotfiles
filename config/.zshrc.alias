@@ -112,3 +112,6 @@ function gitbi() {
 zle -N gitbi
 bindkey '^b' gitbi
 
+alias dcclaudeinit="devcontainer up --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json && devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json --remote-env GITHUB_TOKEN=`gh auth token` mise install"
+alias dcclaude="devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json claude --dangerously-skip-permissions"
+alias ccusage="deno run -E -R=$HOME/.claude -R=/var/folders/ -R=$HOME/.config/claude -S=homedir -N='raw.githubusercontent.com:443' --no-prompt npm:ccusage@latest"
