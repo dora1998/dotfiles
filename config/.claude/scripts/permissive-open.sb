@@ -1,0 +1,34 @@
+(version 1)
+
+(allow default)
+
+(deny file-write*)
+(allow file-write*
+    ;; (param "NAME") には、起動時に -D NAME=VALUE として渡した値が反映される
+
+    ;; プロジェクトディレクトリを TARGET_DIR として指定する
+    (subpath (param "TARGET_DIR"))
+
+    ;; プロジェクトディレクトリ以外に書き込みを許可する場所
+    ;; Claude Code関係
+    (subpath (string-append (param "HOME_DIR") "/.claude"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json.lock"))
+    (literal (string-append (param "HOME_DIR") "/.claude.json.backup"))
+
+    ;; 一時ファイル関連
+    (subpath "/tmp")
+    (subpath "/var/folders/sv")
+    (subpath "/var/folders/dc")
+    (subpath (string-append (param "HOME_DIR") "/.cache"))
+
+    ;; その他のツール関連。ご利用のツールに合わせて調整してください
+    (subpath (string-append (param "HOME_DIR") "/.npm"))
+    (subpath (string-append (param "HOME_DIR") "/Library/pnpm/store"))
+
+    ;; STDOUTとか
+    (literal "/dev/stdout")
+    (literal "/dev/stderr")
+    (literal "/dev/null")
+)
+

@@ -1,5 +1,5 @@
 [user]
-	name = dora
+	name = Minoru Takeuchi
 	email = 31735614+dora1998@users.noreply.github.com
 [filter "lfs"]
 	process = git-lfs filter-process
@@ -42,8 +42,9 @@
 	postBuffer = 157286400
 [init]
 	defaultBranch = main
-
 [include]
 	path = ~/.gitconfig.local
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
+[url "https://github.com/"]
+	insteadOf = git@github.com:

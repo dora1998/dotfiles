@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Bash(rg:*)",
@@ -6,6 +8,8 @@
       "Bash(find:*)",
       "Bash(cp:*)",
       "Bash(mkdir:*)",
+      "Bash(go version)",
+      "Bash(go doc:*)",
       "Bash(go test:*)",
       "Bash(go list:*)",
       "Bash(go build:*)",
@@ -14,12 +18,49 @@
       "Bash(git show:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr create --draft:*)",
+      "Bash(gh run list:*)",
       "Bash(osascript:*)",
       "WebFetch(domain:pkg.go.dev)",
       "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:opentelemetry.io)"
     ],
-    "deny": []
+    "deny": [
+      "Bash(git config *)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~/*)",
+      "Bash(brew install *)",
+      "Bash(npm install -g *)",
+      "Bash(mise *)",
+      "Bash(gh pr close *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh auth *)",
+      "Bash(gh secret set *)",
+      "Bash(gh secret remove *)",
+      "Bash(gcloud *)",
+      "Bash(:(){ :|:& };:)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/deny-check.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccusage@latest statusline",
+    "padding": 0
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754399891635
   }
 }
-
