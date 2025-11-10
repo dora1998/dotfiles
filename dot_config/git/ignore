@@ -1,0 +1,9 @@
+.DS_Store
+
+# gh-glance
+.gh-glance.toml
+.worktree
+
+.cursor/mcp.json
+
+**/.claude/settings.local.json

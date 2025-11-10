@@ -1,0 +1,42 @@
+{
+  "env": {
+    "BASH_MAX_TIMEOUT_MS": "600000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(go test:*)",
+      "Bash(go list:*)",
+      "Bash(go build:*)",
+      "Bash(go mod tidy)",
+      "Bash(git status:*)",
+      "Bash(git show:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr create --draft:*)",
+      "Bash(osascript:*)",
+      "WebFetch(domain:pkg.go.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:opentelemetry.io)"
+    ],
+    "deny": [
+      "Bash(git config:*)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~/*)",
+      "Bash(brew install:*)",
+      "Bash(npm install -g:*)",
+      "Bash(mise:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh secret set:*)",
+      "Bash(gh secret remove:*)",
+      "Bash(gcloud:*)"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}

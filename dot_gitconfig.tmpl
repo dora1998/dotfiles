@@ -1,15 +1,18 @@
 [user]
 	name = Minoru Takeuchi
 	email = 31735614+dora1998@users.noreply.github.com
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
 [core]
 	editor = vim
 	autocrlf = input
 	ignorecase = false
+
 [alias]
 	co = checkout
 	br = branch
@@ -29,22 +32,32 @@
   rb = rebase -i --autosquash
 	pushf = push --force-with-lease
 	pullf = !"git fetch && git reset --hard origin/$(git branch --show-current)"
+
 [pull]
 	ff = only
+
 [push]
   autoSetupRemote = true
+
 [branch]
 	autoSetupMerge = simple
+
 [ghq]
   root = ~/Projects
+
 [http]
 	# https://stackoverflow.com/questions/15843937/git-push-hangs-after-total-line
 	postBuffer = 157286400
+
 [init]
 	defaultBranch = main
-[include]
-	path = ~/.gitconfig.local
+
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
+
 [url "https://github.com/"]
 	insteadOf = git@github.com:
+
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   include "dot_gitconfig.macos" -}}
+{{- end }}
