@@ -114,7 +114,4 @@ bindkey '^b' gitbi
 
 alias dcclaudeinit="devcontainer up --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json && devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json --remote-env GITHUB_TOKEN=`gh auth token` mise install"
 alias dcclaude="devcontainer exec --workspace-folder . --config ~/.config/devcontainer/claude/devcontainer.json claude --dangerously-skip-permissions"
-alias sbclaude="sandbox-exec -f ~/.claude/scripts/permissive-open.sb -D TARGET_DIR="$(pwd)" -D HOME_DIR="$HOME" claude"
 alias ccusage="deno run -E -R=$HOME/.claude -R=/var/folders/ -R=$HOME/.config/claude -S=homedir -N='raw.githubusercontent.com:443' --no-prompt npm:ccusage@latest"
-alias codex='script -q /dev/null codex'
-
