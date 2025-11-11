@@ -1,0 +1,78 @@
+{
+    "title": "Mouse Personal rule",
+    "rules": [
+        {
+            "description": "Use mouse buttons 4, 5 for browser back, forward",
+            "manipulators": [
+                {
+                    "description": "button4 → [ + command",
+                    "from": {
+                        "pointing_button": "button4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "open_bracket",
+                            "modifiers": [ 
+                                "command" 
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "description": "button5 → ] + command",
+                    "from": {
+                        "pointing_button": "button5"
+                    },
+                    "to": [
+                        {
+                            "key_code": "close_bracket",
+                            "modifiers": [ 
+                                "command" 
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        },
+        
+        {
+            "description": "Use mouse buttons 4, 5 for tab left, right",
+            "manipulators": [
+                {
+                    "description": "button4 → [ + command + shift",
+                    "from": {
+                        "pointing_button": "button4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "close_bracket",
+                            "modifiers": [ 
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "description": "button5 → ] + command + shift",
+                    "from": {
+                        "pointing_button": "button5"
+                    },
+                    "to": [
+                        {
+                            "key_code": "non_us_pound",
+                            "modifiers": [ 
+                                "command" ,
+                                "shift"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}

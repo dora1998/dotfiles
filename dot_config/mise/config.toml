@@ -1,0 +1,15 @@
+[tools]
+aws = "latest"
+cosign = "latest"
+deno = "latest"
+go = "latest"
+node = "lts"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@devcontainers/cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:ccmanager" = "latest"
+python = "3.12"
+slsa-verifier = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = []
