@@ -55,15 +55,12 @@ if [ -f '$HOME/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Projects
 if [ -f '$HOME/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Projects/google-cloud-sdk/completion.zsh.inc'; fi
 
 # zaw
-source $HOME/Projects/github.com/zsh-users/zaw/zaw.zsh
+source $HOME/.zsh-tools/zaw/zaw.zsh
 bindkey '^R' zaw-history
 bindkey '^g' zaw-git-recent-branches
 
 # z
-. $HOME/Projects/github.com/rupa/z/z.sh
-
-# ni
-source $HOME/dotfiles/src/ni.zsh
+. $HOME/.zsh-tools/z/z.sh
 
 # prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
