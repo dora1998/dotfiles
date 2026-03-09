@@ -1,5 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(rg:*)",
@@ -13,8 +16,7 @@
       "Bash(go list:*)",
       "Bash(go build:*)",
       "Bash(go mod tidy)",
-      "Bash(git status:*)",
-      "Bash(git show:*)",
+      "Bash(git:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr create --draft:*)",
       "Bash(gh run list:*)",
@@ -24,7 +26,6 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:opentelemetry.io)"
     ],
-    "ask": ["Bash(gcloud:*)"],
     "deny": [
       "Bash(git config:*)",
       "Bash(rm -rf /*)",
@@ -38,6 +39,13 @@
       "Bash(gh secret set:*)",
       "Bash(gh secret remove:*)"
     ],
+    "ask": [
+      "Bash(gcloud:*)",
+      "Bash(gh api -X POST:*)",
+      "Bash(gh api -X PUT:*)",
+      "Bash(gh api -X DELETE:*)",
+      "Bash(gh api -X PATACH:*)"
+    ],
     "defaultMode": "acceptEdits"
   },
   "statusLine": {
@@ -50,8 +58,9 @@
   },
   "language": "japanese",
   "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
-  },
-  "autoUpdatesChannel": "latest"
+  }
 }
