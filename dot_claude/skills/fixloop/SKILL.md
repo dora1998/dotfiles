@@ -83,10 +83,14 @@ CIに `FAILURE` / `ERROR` のチェックが存在する場合:
 
 **対応フロー:**
 1. 指摘内容を読み、関連コードを `Read` / `Grep` でコードベース調査
-2. 指摘が **妥当** と判断できる場合 → 修正してプッシュ
-3. 指摘が **不要・誤検知** と判断できる場合 → 返信して理由を説明し、スレッドをResolveする（修正はしない）:
+2. 指摘が **妥当** と判断できる場合 → 修正してプッシュし、スレッド内で完了を返信する:
    ```bash
-   # 返信
+   gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
+     -f body="対応しました。"
+   ```
+3. 指摘が **不要・誤検知** と判断できる場合 → スレッド内で理由を返信し、スレッドをResolveする（修正はしない）:
+   ```bash
+   # スレッド内返信
    gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
      -f body="調査しましたが、{理由のため} この指摘は適用しません。"
 
@@ -122,7 +126,7 @@ CIに `FAILURE` / `ERROR` のチェックが存在する場合:
 **対応フロー:**
 1. 指摘内容に従って素直に修正する
 2. 修正後コミット＆プッシュ
-3. 対応したコメントのスレッドにリプライして完了を伝える:
+3. 対応したコメントの**スレッド内**でリプライして完了を伝える（`gh pr comment` ではなく必ずスレッド返信APIを使う）:
    ```bash
    gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
      -f body="対応しました。"
