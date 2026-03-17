@@ -13,6 +13,19 @@
 - 公式レジストリ以外（任意の URL 指定、Git リポジトリ指定、ローカルパス指定など）からのパッケージインストールを提案してはならない。
 - 上記ポリシーに違反するコード・コマンド（例: `npm install xxx@latest`、バージョン未指定の `pip install package-name`、グローバルインストールなど）は提示してはならない。
 
+## GitHub Actions
+
+タグではなくSHAで固定すること。また、Renovateが更新できるようにタグもコメントで併記すること。
+
+```
+# Good
+- uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+# Bad
+- uses: actions/checkout@v6
+- uses: actions/checkout@v6.0.2
+```
+
 # Git Branch
 
 - デフォルトブランチの main / master ブランチに対してrebaseやmergeを行うときは、必ずoriginのリモートブランチを参照すること
