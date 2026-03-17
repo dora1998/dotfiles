@@ -28,7 +28,7 @@
       "Bash(kubectl logs:*)",
       "Bash(kubectl config get-contexts)",
       "Bash(kubectl config use-context:*)",
-      "Bash(kubectl config current-context)"
+      "Bash(kubectl config current-context)",
       "WebFetch(domain:pkg.go.dev)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
@@ -45,7 +45,7 @@
       "Bash(gh secret set:*)",
       "Bash(gh secret remove:*)"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "model": "opusplan",
   "statusLine": {
