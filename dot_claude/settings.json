@@ -45,7 +45,7 @@
       "Bash(gh secret set:*)",
       "Bash(gh secret remove:*)"
     ],
-    "defaultMode": "auto"
+    "defaultMode": "acceptEdits"
   },
   "model": "opusplan",
   "statusLine": {
@@ -59,9 +59,9 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
+  "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
-  },
-  "voiceEnabled": true
+  }
 }
