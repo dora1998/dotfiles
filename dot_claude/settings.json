@@ -10,6 +10,8 @@
       "Bash(find:*)",
       "Bash(cp:*)",
       "Bash(mkdir:*)",
+      "Bash(ln:*)",
+      "Bash(unlink:*)",
       "Bash(go version)",
       "Bash(go doc:*)",
       "Bash(go test:*)",
@@ -18,7 +20,8 @@
       "Bash(go mod tidy)",
       "Bash(git:*)",
       "Bash(gh pr list:*)",
-      "Bash(gh pr create --draft:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr view:*)",
       "Bash(gh run list:*)",
       "Bash(osascript:*)",
       "WebFetch(domain:pkg.go.dev)",
@@ -37,17 +40,18 @@
       "Bash(gh pr merge:*)",
       "Bash(gh auth:*)",
       "Bash(gh secret set:*)",
-      "Bash(gh secret remove:*)"
-    ],
-    "ask": [
-      "Bash(gcloud:*)",
-      "Bash(gh api -X POST:*)",
-      "Bash(gh api -X PUT:*)",
-      "Bash(gh api -X DELETE:*)",
-      "Bash(gh api -X PATACH:*)"
+      "Bash(gh secret remove:*)",
+      "Bash(gcloud logging read:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(kubectl config get-contexts)",
+      "Bash(kubectl config use-context:*)",
+      "Bash(kubectl config current-context)"
     ],
     "defaultMode": "acceptEdits"
   },
+  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "ccusage statusline",
@@ -62,5 +66,6 @@
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
-  }
+  },
+  "voiceEnabled": true
 }

@@ -4,7 +4,7 @@ cosign = "latest"
 deno = "latest"
 go = "latest"
 node = "lts"
-python = "3.12"
+python = "3.13"
 slsa-verifier = "latest"
 bun = "latest"
 pnpm = "latest"
@@ -16,6 +16,7 @@ terraform = "latest"
 "npm:safe-rm" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:zizmorcore/zizmor" = "latest"
+gcloud = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node"]
