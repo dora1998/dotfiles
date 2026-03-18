@@ -86,13 +86,13 @@ CIに `FAILURE` / `ERROR` のチェックが存在する場合:
 2. 指摘が **妥当** と判断できる場合 → 修正してプッシュし、スレッド内で完了を返信する:
    ```bash
    gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
-     -f body="対応しました。"
+     -f body="対応しました。<!-- 🤖 replied by Claude -->"
    ```
 3. 指摘が **不要・誤検知** と判断できる場合 → スレッド内で理由を返信し、スレッドをResolveする（修正はしない）:
    ```bash
    # スレッド内返信
    gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
-     -f body="調査しましたが、{理由のため} この指摘は適用しません。"
+     -f body="調査しましたが、{理由のため} この指摘は適用しません。<!-- 🤖 replied by Claude -->"
 
    # スレッドをResolve（review_thread IDを使用）
    gh api graphql -f query='
@@ -129,7 +129,7 @@ CIに `FAILURE` / `ERROR` のチェックが存在する場合:
 3. 対応したコメントの**スレッド内**でリプライして完了を伝える（`gh pr comment` ではなく必ずスレッド返信APIを使う）:
    ```bash
    gh api "repos/{owner}/{repo}/pulls/comments/{comment_id}/replies" \
-     -f body="対応しました。"
+     -f body="対応しました。<!-- 🤖 replied by Claude -->"
    ```
 
 ### Step 4: 状態レポート
