@@ -21,3 +21,4 @@ keybind = super+shift+r=activate_key_table:resize
 window-inherit-working-directory = false
 tab-inherit-working-directory = false
 split-inherit-working-directory = true
+

@@ -3,17 +3,17 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off"
+    "editor.wordBasedSuggestions": "off",
   },
   "[terraform]": {
-    "editor.defaultFormatter": "hashicorp.terraform"
+    "editor.defaultFormatter": "hashicorp.terraform",
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.stylelint": "explicit",
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrains Mono, monospace",
@@ -25,21 +25,16 @@
   "editor.scrollOnMiddleClick": true,
   "editor.tabSize": 2,
   "emmet.triggerExpansionOnTab": true,
-  "errorLens.excludeBySource": [
-    "ts(2307)"
-  ],
+  "errorLens.excludeBySource": ["ts(2307)"],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "vue",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
   ],
   "git.autofetch": true,
-  "git.branchProtection": [
-    "main",
-    "master"
-  ],
+  "git.branchProtection": ["main", "master"],
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -56,14 +51,9 @@
   "remote.defaultExtensionsIfInstalledLocally": [
     "GitHub.copilot",
     "GitHub.copilot-chat",
-    "GitHub.vscode-pull-request-github"
+    "GitHub.vscode-pull-request-github",
   ],
-  "stylelint.validate": [
-    "css",
-    "postcss",
-    "typescript",
-    "typescriptreact"
-  ],
+  "stylelint.validate": ["css", "postcss", "typescript", "typescriptreact"],
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
@@ -88,5 +78,16 @@
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://biomejs.dev": true,
+  },
+  "claudeCode.preferredLocation": "panel",
 }

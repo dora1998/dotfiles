@@ -47,21 +47,37 @@
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "ccusage statusline",
     "padding": 0
   },
   "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": false,
+    "codex@openai-codex": true
+  },
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
   },
   "language": "japanese",
   "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
   "autoUpdatesChannel": "latest",
   "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
+  },
+  "sandbox": {
+    "enableWeakerNetworkIsolation": true,
+    "network": {
+      "allowedDomains": ["github.com", "*.npmjs.org"],
+      "allowUnixSockets": ["~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"]
+    }
   }
 }
