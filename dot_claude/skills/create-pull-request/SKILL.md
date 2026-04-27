@@ -45,26 +45,15 @@ context: fork
 
 #### 既存PRがある場合
 
-- `git push` のみ実行
+1. `git push` のみ実行
+2. PR概要を確認し、もし現在のブランチの変更内容と乖離があれば更新
 
 #### 新規PRの場合
 
 1. `git push -u origin $(git branch --show-current)` でリモートにpush
 2. リポジトリに `.github/PULL_REQUEST_TEMPLATE.md` があればその書式に従ってPR本文を生成
-3. PR本文の末尾に必ずセッション再開用コメントを付与:
-   ```
-   <!-- claude --resume ${CLAUDE_SESSION_ID} -->
-   ```
-4. Draft PRとして作成:
-   ```bash
-   gh pr create --draft --base {default-branch} --title "{title}" --body "$(cat <<'EOF'
-   {PR本文}
 
-   <!-- claude --resume ${CLAUDE_SESSION_ID} -->
-   EOF
-   )"
-   ```
-5. 作成されたPR URLを表示
+### 5. 作成されたPR URLを表示
 
 ## 注意事項
 
