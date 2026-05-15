@@ -1,13 +1,12 @@
 ---
 name: create-pull-request
-description: 作業中の差分をコミットし、Draft PRを作成または更新する
-disable-model-invocation: true
+description: 作業中の差分をコミットしてpushし、Draft PRを作成または更新する。「PRつくって」「PR作って」「PRにして」「コミットして」「コミットする」「プッシュして」等のユーザー指示で使用する
 context: fork
 ---
 
 # 差分コミット＆PR作成/更新
 
-作業中の全差分を適切にコミットし、PRを作成または更新する。
+作業中の全差分を適切にコミットし、PRを作成または更新する。完了後は `fixloop` スキルでCI・レビュー監視を開始する。
 
 ## 処理フロー
 
@@ -54,6 +53,17 @@ context: fork
 2. リポジトリに `.github/PULL_REQUEST_TEMPLATE.md` があればその書式に従ってPR本文を生成
 
 ### 5. 作成されたPR URLを表示
+
+### 6. fixloopスキルで監視を開始
+
+PR作成または更新が完了したら、`Skill` ツールで `fixloop` スキルを起動する:
+
+```
+Skill({ skill: "fixloop", args: "{pr_number}" })
+```
+
+これによりPRのCI・レビューが `Monitor` で継続監視され、CI失敗や新着レビューに自動対応される。
+ユーザーに「監視を開始しました」と一言伝える。
 
 ## 注意事項
 
