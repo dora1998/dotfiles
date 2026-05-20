@@ -14,9 +14,11 @@ terraform = "latest"
 "npm:ccmanager" = "latest"
 "npm:ccusage" = "latest"
 "npm:safe-rm" = "latest"
-"ubi:go-task/task" = "latest"
-"ubi:zizmorcore/zizmor" = "latest"
+"github:go-task/task" = "latest"
+"github:zizmorcore/zizmor" = "latest"
 gcloud = "latest"
+"npm:@playwright/cli" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node"]
+minimum_release_age = "7d"

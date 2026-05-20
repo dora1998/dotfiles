@@ -32,7 +32,9 @@
       "WebFetch(domain:pkg.go.dev)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:opentelemetry.io)"
+      "WebFetch(domain:opentelemetry.io)",
+      "Bash(gcloud version:*)",
+      "Bash(bq query *)"
     ],
     "deny": [
       "Bash(git config:*)",
@@ -43,9 +45,21 @@
       "Bash(mise:*)",
       "Bash(gh auth:*)",
       "Bash(gh secret set:*)",
-      "Bash(gh secret remove:*)"
+      "Bash(gh secret remove:*)",
+      "mcp__linear-server__delete_comment",
+      "mcp__linear-server__delete_status_update",
+      "mcp__linear-server__delete_attachment",
+      "Bash(chmod 777*)",
+      "Bash(sudo rm*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/id_rsa*)",
+      "Read(**/id_ed25519*)",
+      "Read(**/.aws/credentials)"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "statusLine": {
     "type": "command",
@@ -62,22 +76,29 @@
         "source": "github",
         "repo": "openai/codex-plugin-cc"
       }
-    }
+    }{{ onepasswordDocument "ddoxcazfyvyg6gvktonxofq36u" }}
   },
   "language": "japanese",
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "*.npmjs.org"
+      ],
+      "allowUnixSockets": [
+        "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+      ]
+    },
+    "enableWeakerNetworkIsolation": true
+  },
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
   "autoUpdatesChannel": "latest",
-  "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
+  "remoteControlAtStartup": false,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
-  },
-  "sandbox": {
-    "enableWeakerNetworkIsolation": true,
-    "network": {
-      "allowedDomains": ["github.com", "*.npmjs.org"],
-      "allowUnixSockets": ["~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"]
-    }
   }
 }
