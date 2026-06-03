@@ -57,7 +57,7 @@
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
-    "Q_NEW_SESSION": "1"
+    "Q_NEW_SESSION": "1",
   },
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
@@ -90,4 +90,6 @@
     "https://biomejs.dev": true,
   },
   "claudeCode.preferredLocation": "panel",
+  "chat.viewSessions.orientation": "stacked",
+  "go.toolsManagement.autoUpdate": true,
 }

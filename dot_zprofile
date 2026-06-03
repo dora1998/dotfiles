@@ -15,3 +15,4 @@ eval "$(mise activate zsh --shims)"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zprofile.post.zsh"
+export HOMEBREW_NO_AUTO_UPDATE=1
