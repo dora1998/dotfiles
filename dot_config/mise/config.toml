@@ -22,3 +22,5 @@ gcloud = "latest"
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node"]
 minimum_release_age = "7d"
+auto_install = false
+

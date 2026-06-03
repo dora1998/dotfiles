@@ -42,7 +42,7 @@
       "Bash(rm -rf ~/*)",
       "Bash(brew install:*)",
       "Bash(npm install -g:*)",
-      "Bash(mise:*)",
+      "Bash(mise use:*)",
       "Bash(gh auth:*)",
       "Bash(gh secret set:*)",
       "Bash(gh secret remove:*)",
@@ -79,6 +79,24 @@
     }{{ onepasswordDocument "ddoxcazfyvyg6gvktonxofq36u" }}
   },
   "language": "japanese",
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "*.npmjs.org",
+        "*.flatt.tech"
+      ],
+      "allowUnixSockets": [
+        "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+      ]
+    },
+    "filesystem": {
+      "allowWrite": [
+        "~/Library/Caches/go-build"
+      ]
+    },
+    "enableWeakerNetworkIsolation": true
+  },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
@@ -89,15 +107,5 @@
   "voiceEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754399891635
-  },
-  "sandbox": {
-    "enableWeakerNetworkIsolation": true,
-    "network": {
-      "allowedDomains": ["github.com", "*.npmjs.org", "*.flatt.tech"],
-      "allowUnixSockets": ["~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"]
-    },
-    "filesystem": {
-      "allowWrite": ["~/Library/Caches/go-build"]
-    }
   }
 }
