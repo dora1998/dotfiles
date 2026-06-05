@@ -23,4 +23,8 @@ gcloud = "latest"
 idiomatic_version_file_enable_tools = ["go", "node"]
 minimum_release_age = "7d"
 auto_install = false
+trusted_config_paths = [
+  "~/Projects/github.com/WinTicket",
+  "~/Projects/github.com/dora1998"
+]
 
