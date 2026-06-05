@@ -1,7 +1,6 @@
 ---
 name: create-pull-request
 description: 作業中の差分をコミットしてpushし、Draft PRを作成または更新する。「PRつくって」「PR作って」「PRにして」「コミットして」「コミットする」「プッシュして」等のユーザー指示で使用する
-context: fork
 ---
 
 # 差分コミット＆PR作成/更新
