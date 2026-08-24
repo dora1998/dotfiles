@@ -31,23 +31,10 @@
 - デフォルトブランチの main / master ブランチに対してrebaseやmergeを行うときは、必ずoriginのリモートブランチを参照すること
   - 誤操作防止のためにローカルブランチをつくっておらず、存在していても長らくpullしておらず古い場合が多い
 
-# 通知
-
-タスク完了時に以下を実行してください。
-
-## 実装完了時
-
-`osascript -e 'display notification "{{...の実装を完了しました}}" with title "実装完了" sound name "Glass"'`
-
-## 提案完了時
-
-`osascript -e 'display notification "{{...を提案しました}}" with title "提案" sound name "Funk"'`
-
-## その他完了時
-
-`osascript -e 'display notification "{{...を完了しました}}" with title "...完了" sound name "Submarine"'`
-
 # コードの書き方
 
-- コミットメッセージやプルリクエストの概要は日本語で記述して
-
+- コミットメッセージやプルリクエストの概要は日本語で記述
+- コードコメントを記述する際は、以下を遵守する
+  - PRレビューのみに必要で、将来に渡って残す必要がない内容は書かない
+  - TODOコメントを除き、チケット番号・PR番号などは書かない
+  - コードのみを読んだだけでは推測しづらいコンテキストがある場合は書く
